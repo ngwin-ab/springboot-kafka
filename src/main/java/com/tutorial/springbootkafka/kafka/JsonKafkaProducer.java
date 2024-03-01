@@ -20,7 +20,7 @@ public class JsonKafkaProducer {
     private KafkaTemplate<String, User> kafkaTemplate;
 
     public void sendMessage(User data) {
-        LOGGER.info(String.format("Message sent -> %s", data.toString()));
+        LOGGER.info(String.format("Json message sent -> %s", data.toString()));
 
         Message<User> message = MessageBuilder
                 .withPayload(data)
